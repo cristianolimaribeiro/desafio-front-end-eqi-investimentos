@@ -21,7 +21,10 @@ Após instalar as dependências, devemos entrar na pasta api e rodar o comando p
   npx json-server db.json
 ```
 
-Devemos também rodar na raiz do projeto comando para iniciar o servidor http para rodar o projeto em conjunto com as requisições a api 
+Devemos também rodar na raiz do projeto comando para iniciar o servidor http para rodar o projeto em conjunto com as requisições a api que rodará através de alguns endereços como :
+
+  http://XXX.XXX.XXX.XXX:8080 (ip da sua máquina)
+  http://127.0.0.1:8080 (localhost)
 
 ```bash
   cd ..
