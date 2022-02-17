@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Calculadora de Investimentos</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <h1>Simulador de Investimentos</h1>
+            </header>
+            <div class="container_forms">
+                <form class="container_simulacao">
+                    <h2>Simulador</h2>
+
+                    <div class="container_dados">
+                        <div class="container_rendimentos">
+                            <div class="title">
+                                <p>Rendimentos</p>
+                                <img src="./assets/img/info.svg" alt="info" title="Rendimentos">
+                            </div>
+                            <div class="container_btn_rendimentos">
+                                <button class="btn active" id="btn_bruto">Bruto</button>
+                                <button class="btn" id="btn_liquido">Líquido</button>
+                            </div>
+                            <div class="container_input">
+                                <label>Aporte Inicial</label>
+                                <input type="text" class="input_text"id="aporte_inicial">
+                                <label>Prazo (em meses)</label>
+                                <input type="text" class="input_text" id="prazos">
+                                <label>IPCA (ao ano)</label>
+                                <input type="text" id="ipca">
+                            </div>
+                            
+                        </div>
+
+                        <div class="container_indexacao">
+                            <div class="title">
+                                <p>Tipos de Indexação</p>
+                                <img src="./assets/img/info.svg" alt="info" title="Indexação">
+                            </div>
+                            <div class="container_btn_rendimentos">
+                                <button class="btn" id="btn_pre">Pré</button>
+                                <button class="btn active" id="btn_pos">Pós</button>
+                                <button class="btn" id="btn_fixado">Fixado</button>
+                            </div>
+                            <div class="container_input">
+                                <label>Aporte Mensal</label>
+                                <input type="text" class="input_text" id="aporte_mensal">
+                                <label>Rentabilidade</label>
+                                <input type="text" class="input_text" id="rentabilidade">
+                                <label>CDI (ao ano)</label>
+                                <input type="text" id="cdi">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="container_button">
+                        <button class="btn_large" id="btn_limpa_campos" type="button">Limpar Campos</button>
+                        <button class="btn_large btn_disabled" id="btn_simular" type="submit" disabled>Simular</button>
+                    </div>
+                </form>
+                <div class="container_resultados results_hidden">
+                    <h2>Resultado da Simulação</h2>
+                    <div class="container_resultados">
+                        <div class="container_card_resultados">
+                            <div class="card">
+                                <p class="card_titulo">Valor Final Bruto</p>
+                                <p class="card_resultado" id="valor_final_bruto"></p>
+                            </div>
+                            <div class="card">
+                                <p class="card_titulo">Alíquota IR</p>
+                                <p class="card_resultado" id="aliquota_ir"></p>
+                            </div>
+                            <div class="card">
+                                <p class="card_titulo">Valor Pago em IR</p>
+                                <p class="card_resultado" id="valor_pago_ir"></p>
+                            </div>
+                            <div class="card">
+                                <p class="card_titulo">Valor Final Líquido</p>
+                                <p class="card_resultado green" id="valor_final_liquido"></p>
+                            </div>
+                            <div class="card">
+                                <p class="card_titulo">Valor Total Investido</p>
+                                <p class="card_resultado" id="valor_total_investido"></p>
+                            </div>
+                            <div class="card">
+                                <p class="card_titulo">Ganho Líquido</p>
+                                <p class="card_resultado green" id="ganho_liquido"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart_area">
+                        <h2 class="projecao">Projeção de Valores</h2>
+                        <div class="container_canvas">
+
+                            <p class="vertical_text"> valor em reais(R$)</p>
+                            <canvas class="canvas"></canvas> 
+                        </div>
+                        <p class="chart_paragraph">Tempo(Meses)</p>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script src="./assets/js/jquery1.10.2.js"></script>
+    <script src="./assets/js/jquery.mask.js"></script>
+    <script src="./assets/js/jquery.maskMoney.js"></script>
+    <script src="./assets/js/inputsMasks.js"></script>
+    <script src="./assets/js/chart.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
